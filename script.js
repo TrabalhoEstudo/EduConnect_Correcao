@@ -105,11 +105,12 @@ formulario.addEventListener('submit', evento => {
     return;
   }
 
-  // Verifica se o e-mail já está cadastrado
+   // Verifica se o e-mail já está cadastrado
   if (interessados.some(pessoa =>
-    pessoa.email.toLowerCase() === email.toLowerCase()
-  )) {
-    aviso.textContent = 'E-mail já cadastrado!';
+    pessoa.email.toLowerCase() === email.toLowerCase() &&
+    pessoa.curso.toLowerCase() === curso.toLowerCase()
+  )){
+    aviso.textContent = 'E-mail ou curso já cadastrado!';o
     return;
   }
 
